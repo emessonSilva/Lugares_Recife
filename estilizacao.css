@@ -3,24 +3,42 @@
     color: white;
 }
 
+
 body {
-    background-color: black;
+    background-size: 200%;
+    background-image: linear-gradient(
+        to bottom left,
+        grey 0%,
+        black 100%
+    );
+
+    transition: 600ms ease;
 }
 
-h1 {
+ body:hover {
+    background-position: 100% 0;  
+ }
+
+#title1 {
     text-align: center;
     margin-top: 10px;
+    animation-name: slidein;
+    animation-duration: 5s; 
+    animation-delay: 0.0001s; 
 }
 
-h2 {
+#title2 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    animation-name: slidein;
+    animation-duration: 5s; 
+    animation-delay: 0.0001s; 
 
 }
 
-p { 
-    margin: 20px 20px 20px 20px;
+.pf { 
+    margin: 20px 40px 20px 40px;
     text-align: justify;
 }
 
@@ -30,7 +48,23 @@ p {
     align-content: center;    
 }
 
-footer {
-    text-align: center;
-    margin-top: 30px;
+#fot {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes slidein {
+
+    from {
+        margin-left: 100%;
+        width: 100%;
+        color: black
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+     color: white;
+   }
+
 }
