@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    animation-name: slidein;
+    animation-duration: 5s; 
+    animation-delay: 0.0001s; 
+
+}
+
+.pf {
+    text-align: justify;
+    margin: 10px 30px;
+}
+
+.foto {
+    border-radius: 50%;
+    width: 40%;
+    align-content: center;    
+}
+
+@keyframes slidein {
+
+    from {
+        margin-left: 100%;
+        width: 100%;
+        color: black
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+        color: white;
+   }
+
+}
+
+body {
+    background-size: 200%;
+    background-image: linear-gradient(
+        to bottom left,
+        green 0%,
+        cyan 50%,
+        magenta 100%
+        
+    );
+
+    transition: 600ms ease;
+}
+
+ body:hover {
+    background-position: 100% 0;  
+ }
